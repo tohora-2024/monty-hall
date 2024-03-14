@@ -5,18 +5,6 @@
       "author": "Jess",
       "message": "Hello",
       "photo": "https://images.dog.ceo/breeds/chihuahua/n02085620_575.jpg"
-    },
-    {
-      "id": 2,
-      "author": "hi",
-      "message": "hello",
-      "photo": "url"
-    },
-    {
-      "author": "hi 2",
-      "message": "hello 2",
-      "photo": "url",
-      "id": 3
     }
   ]
 }
