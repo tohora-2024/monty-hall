@@ -27,7 +27,7 @@ export default function PostBoard() {
     <>
       <h1>PostBoard</h1>
       {data.map((post) => (
-        <Post props={post} />
+        <Post name={post} />
       ))}
     </>
   )
