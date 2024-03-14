@@ -1,10 +1,10 @@
- {
-   "event": [
+{
+  "event": [
     {
       "id": 1,
       "author": "Jess",
       "message": "Hello",
       "photo": "https://images.dog.ceo/breeds/chihuahua/n02085620_575.jpg"
     }
-   ]
-  }
+  ]
+}
