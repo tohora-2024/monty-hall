@@ -11,20 +11,20 @@ export async function getMessages(): Promise<MessageData> {
   }
 }
 
-export async function getMessageById(
-  id: number
-): Promise<MessageData | undefined> {
-  try {
-    const json = await fs.readFile(filePath, 'utf-8')
-    const messages = JSON.parse(json).messages
-    const messageById = messages.find(
-      (message: MessageData) => message.id == id
-    )
-    return messageById
-  } catch (error: any) {
-    return error.message
-  }
-}
+// export async function getMessageById(
+//   id: number
+// ): Promise<MessageData | undefined> {
+//   try {
+//     const json = await fs.readFile(filePath, 'utf-8')
+//     const messages = JSON.parse(json).messages
+//     const messageById = messages.find(
+//       (message: MessageData) => message.id == id
+//     )
+//     return messageById
+//   } catch (error: any) {
+//     return error.message
+//   }
+// }
 
 export async function addMessage(newMessage: MessageData): Promise<void> {
   try {

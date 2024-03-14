@@ -8,16 +8,25 @@ router.get('/', async (req, res) => {
   res.json(data)
 })
 
-router.get('/:id', async (req, res) => {
+// router.get('/:id', async (req, res) => {
+//   try {
+//     const id = Number(req.params.id)
+//     const data = await store.getMessageById(id)
+//     res.json(data)
+//   } catch (error: any) {
+//     res.sendStatus(404)
+//   }
+// })
+
+router.post('/:submit', async (req, res) => {
   try {
-    const id = Number(req.params.id)
-    const data = await store.getMessageById(id)
-    res.json(data)
+    const newMessage = req.body
+    await store.addMessage(newMessage)
+    res.sendStatus(201)
   } catch (error: any) {
     res.sendStatus(404)
+    console.error(error)
   }
 })
-
-router.post('/', async (req, res) => {})
 
 export default router
