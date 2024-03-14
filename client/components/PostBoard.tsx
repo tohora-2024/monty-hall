@@ -1,32 +1,27 @@
+import { useQuery } from '@tanstack/react-query'
+import { getDogImages } from '../api/dogimagesApi'
 import { MessageData } from '../models/dogimages'
 import Post from './Post'
+import { getMessages } from '../api/apiClient'
 
 export default function PostBoard() {
-  const data = [
-    {
-      id: 1,
-      author: 'Jess',
-      message: 'Hello',
-      photoURL: 'https://images.dog.ceo/breeds/chihuahua/n02085620_575.jpg',
-    },
-    {
-      id: 2,
-      author: 'Joel',
-      message: 'Bye',
-      photoURL: 'https://images.dog.ceo/breeds/chihuahua/n02085620_575.jpg',
-    },
-    {
-      id: 3,
-      author: 'Tyler',
-      message: 'what?',
-      photoURL: 'https://images.dog.ceo/breeds/chihuahua/n02085620_575.jpg',
-    },
-  ]
+  const { isPending, isError, error, data } = useQuery({
+    queryKey: ['messages'],
+    queryFn: () => getMessages(),
+  })
+
+  if (isPending) {
+    return <>Loading</>
+  }
+
+  if (isError) {
+    return <>Oops! {error}</>
+  }
 
   return (
     <>
       <h1>PostBoard</h1>
-      {data.map((post) => (
+      {data.event?.map((post) => (
         <Post name={post} />
       ))}
     </>

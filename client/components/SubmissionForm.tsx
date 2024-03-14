@@ -1,28 +1,53 @@
 import React, { useState } from 'react'
+import { getDogImages } from '../api/dogimagesApi'
+import { useQuery } from '@tanstack/react-query'
 
 export default function SubmissionForm() {
   const [postInfo, setPostInfo] = useState({
     author: '',
     message: '',
+    photoURL: '',
+  })
+
+  const picture = useQuery({
+    queryKey: ['test'],
+    queryFn: async () => getDogImages(),
   })
 
   const handleChange = (
-    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    event: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     const { name, value } = event.currentTarget
     setPostInfo((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = event.currentTarget
+    setPostInfo((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (event: React.FormEvent) => {
     event?.preventDefault()
-    console.log(postInfo)
 
-    // --- SEMI PSEUDOCODE FOR Message Post Hook Call ---
-    // const message = { ...postInfo}
+    try {
+      const response = await fetch('/api/v1/messages/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postInfo),
+      })
 
-    // if (message && typeof message === 'object'){
-    //   usePostToDatabase(information)
-    // }
+      if (!response.ok) {
+        throw new Error('Failed to submit message')
+      }
+
+      setPostInfo({ author: '', message: '', photoURL: '' })
+    } catch (error) {
+      console.error('Error submitting message:', error)
+    }
   }
 
   return (
@@ -45,17 +70,16 @@ export default function SubmissionForm() {
             <textarea
               onChange={handleChange}
               placeholder="Message"
-              maxLength={200}
+              maxLength={500}
               id="Message"
               name="message"
               value={postInfo.message}
             ></textarea>
           </div>
-          {/* This is a stretch opportunity for if we are allowing people to randomise their picture from different sources */}
-          {/* <select>
-            <option value="dog">Dog</option>
-            <option value="cat">Cat</option>
-          </select> */}
+          <select onChange={handleSelect} name="photoURL">
+            <option>Change this</option>
+            <option value={picture.data}>Dog</option>
+          </select>
           <button type="submit">Submit</button>
         </form>
       </span>

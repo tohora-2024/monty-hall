@@ -2,9 +2,6 @@ import { MessageData, Postmodel } from '../models/dogimages'
 
 export default function Post(props: Postmodel) {
   const post: MessageData = props.name
-
-  console.log(post.photoURL)
-
   return (
     <div>
       <p>{post.message}</p>
