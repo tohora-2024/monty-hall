@@ -8,7 +8,7 @@ export default function ThreeDoors() {
     <>
       <h1 className="header">CHOOSE WISELY</h1>
       <div className="container">
-        <Link to="/submit">
+        <Link to="/sponge">
           <p>
             <img src={Door} alt="door1" className="img" />
           </p>
@@ -21,6 +21,11 @@ export default function ThreeDoors() {
         <Link to="/board">
           <p>
             <img src={Door} alt="door3" className="img" />
+          </p>
+        </Link>
+        <Link to="/puppies">
+          <p>
+            <img src={Door} alt="door4" className="img" />
           </p>
         </Link>
       </div>

@@ -9,6 +9,8 @@ import SubmissionForm from './components/SubmissionForm.tsx'
 import ThreeDoors from './components/ThreeDoors.tsx'
 import PostBoard from './components/PostBoard.tsx'
 import Goat from './components/Goat.tsx'
+import Sponge from './components/Sponge.tsx'
+import Puppies from './components/Puppies.tsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +19,8 @@ const router = createBrowserRouter(
       <Route path="/submit" element={<SubmissionForm />} />
       <Route path="/board" element={<PostBoard />} />
       <Route path="/goat" element={<Goat />} />
+      <Route path="/sponge" element={<Sponge />} />
+      <Route path="/puppies" element={<Puppies />} />
     </Route>
   )
 )
