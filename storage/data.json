@@ -1,64 +1,10 @@
-const Data = [
-  {
-    event1: {
-      name: 'Example 1',
-      messages: [
-        {
-          Submitter: 'Sub 1',
-          Message: 'Generic 1',
-          photo: '',
-        },
-        {
-          Sumitter: 'Sub 2',
-          Message: 'Generic 2',
-          photo: '',
-        },
-      ],
-    },
-  },
-  {
-    event2: {
-      name: 'Example 2',
-      messages: [
-        {
-          Submitter: 'Sub 1',
-          Message: 'Generic 1',
-          photo: '',
-        },
-        {
-          Sumitter: 'Sub 2',
-          Message: 'Generic 2',
-          photo: '',
-        },
-      ],
-    },
-  },
-  {
-    event3: {
-      name: "Lucy's Farewell",
-      Messages: [
-        {
-          Submitter: 'Jess',
-          Message: 'Sad to see you go',
-          photo: '',
-        },
-        {
-          Sumitter: 'Joel',
-          Message: 'Thank you for being a cool homegroup captain',
-          photo: '',
-        },
-        {
-          Submitter: 'Tyler',
-          Message:
-            'I had a lot of fun getting to know you and wish you the best going forward',
-          photo: '',
-        },
-        {
-          Submitter: 'Ben',
-          Message: 'Laters!',
-          photo: '',
-        },
-      ],
-    },
-  },
-]
+ {
+   "event": [
+    {
+      "id": 1,
+      "submitter": "Jess",
+      "message": "Hello",
+      "photo": "https://dog.ceo/api/breeds/image/random"
+    }
+   ]
+  }
