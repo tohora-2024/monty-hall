@@ -1,15 +1,18 @@
 import { MessageData } from '../models/dogimages'
 
-export default function Post(props: MessageData) {
-  const post = props
-  console.log(post)
+export default function Post(props) {
+  const post: MessageData = props.name
 
-  console.log(post.author)
+  console.log(post.photoURL)
+
   return (
     <div>
       <p>{post.message}</p>
       <p>{post.author}</p>
-      <img src={post.photoURL} alt="generated author profile pic from an API" />
+      <img
+        src={`${post.photoURL}`}
+        alt="generated author profile pic from an API"
+      />
     </div>
   )
 }
