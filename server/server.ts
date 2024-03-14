@@ -14,7 +14,7 @@ server.get('/api/v1/greeting', (req, res) => {
 
 server.use(express.json())
 server.use(cors('*' as CorsOptions))
-server.use('api/v1/messages', messages)
+server.use('/api/v1/messages', messages)
 
 if (process.env.NODE_ENV === 'production') {
   server.use(express.static(Path.resolve('public')))

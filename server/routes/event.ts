@@ -18,10 +18,10 @@ router.get('/', async (req, res) => {
 //   }
 // })
 
-router.post('/:submit', async (req, res) => {
+router.post('/submit', async (req, res) => {
   try {
     const newMessage = req.body
-    // const imageResponse =
+    // console.log('Routes:', newMessage)
     await store.addMessage(newMessage)
     res.sendStatus(201)
   } catch (error: any) {
