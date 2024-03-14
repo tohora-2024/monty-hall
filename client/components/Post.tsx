@@ -1,6 +1,9 @@
 import { MessageData } from '../models/dogimages'
 
-export default function Post(post: MessageData) {
+export default function Post(props: MessageData) {
+  const post = props
+  console.log(post)
+
   console.log(post.author)
   return (
     <div>
@@ -10,3 +13,6 @@ export default function Post(post: MessageData) {
     </div>
   )
 }
+
+// --- calling a react component named Child and passing it props ---
+// <Child name="props" />
