@@ -1,7 +1,7 @@
-import { MessageData } from '../models/dogimages'
+import { MessageData, Post } from '../models/dogimages'
 
-export default function Post(props) {
-  const post: MessageData = props.name
+export default function Post(props: Post) {
+  const post: MessageData = props.Post
 
   console.log(post.photoURL)
 

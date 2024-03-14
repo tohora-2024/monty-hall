@@ -9,3 +9,12 @@ export interface MessageData {
   message: string
   photoURL: string
 }
+
+export interface Post {
+  Post: {
+    id: number
+    author: string
+    message: string
+    photoURL: string
+  }
+}
