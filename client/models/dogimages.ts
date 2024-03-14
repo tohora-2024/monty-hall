@@ -10,8 +10,8 @@ export interface MessageData {
   photoURL: string
 }
 
-export interface Post {
-  Post: {
+export interface Postmodel {
+  name: {
     id: number
     author: string
     message: string
