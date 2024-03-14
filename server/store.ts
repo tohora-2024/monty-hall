@@ -1,14 +1,13 @@
-// import type {MessageData} from '../'
-import * as fs from 'node:fs/promises'
-
+import type { MessageData } from '../client/models/dogimages.ts'
 const filePath = 'storage/data.json'
+import * as fs from 'node:fs/promises'
 
 export async function getMessages(): Promise<MessageData> {
   try {
     const json = await fs.readFile(filePath, 'utf-8')
     return JSON.parse(json)
   } catch (error: any) {
-    return 'invalid'
+    return error.message
   }
 }
 
@@ -23,7 +22,7 @@ export async function getMessageById(
     )
     return messageById
   } catch (error: any) {
-    return 'invalid'
+    return error.message
   }
 }
 
