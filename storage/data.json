@@ -2,9 +2,9 @@
    "event": [
     {
       "id": 1,
-      "submitter": "Jess",
+      "author": "Jess",
       "message": "Hello",
-      "photo": "https://dog.ceo/api/breeds/image/random"
+      "photo": "https://images.dog.ceo/breeds/chihuahua/n02085620_575.jpg"
     }
    ]
   }
