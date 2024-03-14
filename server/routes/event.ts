@@ -21,6 +21,7 @@ router.get('/', async (req, res) => {
 router.post('/:submit', async (req, res) => {
   try {
     const newMessage = req.body
+    // const imageResponse =
     await store.addMessage(newMessage)
     res.sendStatus(201)
   } catch (error: any) {
