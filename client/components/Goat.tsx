@@ -1,12 +1,16 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import { Link } from 'react-router-dom'
-import PostBoard from './PostBoard'
-import Door2 from '../images/Door2.png'
+import SupriseImage from '../images/goat.png'
+import SupriseSound from '../audio/gnome.mp3'
 import Door from '../images/Door.png'
 
-export default function ThreeDoors() {
+export default function Suprise() {
   return (
     <>
-      <h1 className="header">CHOOSE WISELY</h1>
+      <h1 className="header">GERARD&apos;S FAULT</h1>
+      <audio autoPlay>
+        <source src={SupriseSound} type="audio/mp3"></source>
+      </audio>
       <div className="container">
         <Link to="/sponge">
           <p>
@@ -15,7 +19,7 @@ export default function ThreeDoors() {
         </Link>
         <Link to="/goat">
           <p>
-            <img src={Door2} alt="door2" className="img" />
+            <img src={SupriseImage} alt="door2" className="img" />
           </p>
         </Link>
         <Link to="/board">
