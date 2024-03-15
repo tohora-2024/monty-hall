@@ -13,7 +13,7 @@ export default function Sponge() {
         <source src={SupriseSound} type="audio/mp3"></source>
       </audio>
       <div className="container">
-        <Link to="/sponge">
+        <Link to="/">
           <p>
             <img src={SupriseImage} alt="door1" className="img" />
           </p>

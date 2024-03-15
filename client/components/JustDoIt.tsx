@@ -28,7 +28,7 @@ export default function JustDoIt() {
             <img src={Door} alt="door3" className="img" />
           </p>
         </Link>
-        <Link to="/justdoit">
+        <Link to="/">
           <p>
             <img src={SupriseImage} alt="door4" className="img" />
           </p>
