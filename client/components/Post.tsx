@@ -6,11 +6,7 @@ export default function Post(props: Postmodel) {
     <div className="postContainer">
       <p className="postMessage">"{post.message}"</p>
       <p className="postAuthor">-{post.author}</p>
-      <img
-        className="postImage"
-        src={`${post.photoURL}`}
-        alt="generated author profile pic from an API"
-      />
+      <img className="postImage" src={`${post.photoURL}`} />
     </div>
   )
 }
