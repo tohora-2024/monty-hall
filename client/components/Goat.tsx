@@ -17,7 +17,7 @@ export default function Suprise() {
             <img src={Door} alt="door1" className="img" />
           </p>
         </Link>
-        <Link to="/goat">
+        <Link to="/">
           <p>
             <img src={SupriseImage} alt="door2" className="img" />
           </p>
