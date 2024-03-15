@@ -28,7 +28,7 @@ export default function Sponge() {
             <img src={Door} alt="door3" className="img" />
           </p>
         </Link>
-        <Link to="/puppies">
+        <Link to="/justdoit">
           <p>
             <img src={Door} alt="door4" className="img" />
           </p>
