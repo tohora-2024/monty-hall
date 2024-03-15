@@ -56,7 +56,7 @@ body {
 
 .postMessage {
   grid-area: 1 / 1 / 2 / 4;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .postAuthor {
@@ -73,5 +73,8 @@ body {
 }
 
 .boardHeading {
+  text-align: center;
+}
+.submit {
   text-align: center;
 }

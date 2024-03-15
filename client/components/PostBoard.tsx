@@ -20,7 +20,7 @@ export default function PostBoard() {
   return (
     <>
       <h1 className="boardHeading">Thank you Lucy!</h1>
-      <h2>
+      <h2 className="submit">
         <Link to="/submit">Add your message</Link>
       </h2>
       <div className="postBoardContainer">
