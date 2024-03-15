@@ -1,19 +1,21 @@
-
 .img {
-  height: 800px;
-  width: 360px;
+  height: 700px;
+  width: 315px;
   margin-left: 60px;
   margin-right: 60px;
   border-image: 10px;
 }
 
 body {
-  background-color: grey;
+  background: linear-gradient(rgb(221, 171, 21), #eee);
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .goat {
-  height: 800px;
-  width: 360px;
+  height: 700px;
+  width: 315px;
   margin-left: 60px;
   margin-right: 60px;
   display: flex;
@@ -28,4 +30,48 @@ body {
   text-align: center;
   font-weight: bold;
   font-size: 100px;
+}
+
+.postBoardContainer {
+  flex-flow: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.postContainer {
+  border: solid;
+  padding: 5px;
+  display: grid;
+  margin: 1.25rem;
+  background-color: beige;
+  justify-content: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 50rem;
+  height: 15rem;
+}
+
+.postMessage {
+  grid-area: 1 / 1 / 2 / 4;
+  font-size: 25px;
+}
+
+.postAuthor {
+  grid-area: 2 / 3 / 3 / 4;
+  font-size: 30px;
+  font-style: italic;
+  font-family: Helvetica;
+}
+
+.postImage {
+  max-width: 15rem;
+  max-height: 15rem;
+  grid-area: 1 / 4 / 3 / 5;
+}
+
+.boardHeading {
+  text-align: center;
 }

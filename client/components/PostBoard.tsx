@@ -20,10 +20,12 @@ export default function PostBoard() {
 
   return (
     <>
-      <h1>PostBoard</h1>
-      {data.event?.map((post) => (
-        <Post name={post} />
-      ))}
+      <h1 className="boardHeading">Thank you Lucy!</h1>
+      <div className="postBoardContainer">
+        {data.event?.map((post) => (
+          <Post name={post} />
+        ))}
+      </div>
     </>
   )
 }
